@@ -84,10 +84,6 @@ get_header();
 
 <div class="tab_container">
 <div id="tab1" class="tab_content">
-
-Git project
-dfgdfgdfg
-
 <?php 
 $posts = get_posts(array('post_type' => 'news', 'posts_per_page' => 5, 'tax_query' => array(array('taxonomy' => 'ncategory', 'field' => 'slug', 'terms' => 'lenta')))); 
 // var_dump($cat_posts);
