@@ -1,0 +1,183 @@
+/*  HTML5 ✰ Boilerplate  */
+#beforeafter{
+    position: relative;
+    top:0px;
+    left:0px;
+}
+#baGroup {
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+
+}
+
+.baCanvas {
+	position:absolute;
+	top:0px;
+	left:0px;
+	padding:0px;
+	overflow:hidden;
+	background-color: #eeeeee;
+}
+.baCanvas.top {
+	z-index: 20;
+}
+.baCanvas.bottom {
+	z-index: 10;
+}
+
+#dragBG {
+	background:#999999;
+	position:absolute;
+	width:4px;
+	left:4px;
+	top:0px;
+	z-index:50;
+	opacity:1
+}
+
+#dragBG2 {
+	background:#FFFFFF;
+	position:absolute;
+	width:2px;
+	left:5px;
+	top:0px;
+	z-index:50;
+	opacity:1
+}
+
+#dragBG3 {
+	background:#000000;
+	position:absolute;
+	width:2px;
+	left:8px;
+	top:0px;
+	z-index:50;
+	/* for IE */
+  filter:alpha(opacity=30);
+  /* CSS3 standard */
+	opacity:0.3
+}
+#dragwrapper{
+	position:absolute;
+	top:0px;
+	width:13;
+	padding:0;
+	left:10;
+	z-index:200;
+	overflow:visible;
+	width:30px;
+}
+
+.baLabels{
+	position:absolute;
+	margin:0px;
+	padding:2px 5px;
+	background: #111111;
+	cursor:pointer;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px; 
+	font-weight:normal;
+	color:#eeeeee;
+	z-index:1000;
+	white-space: nowrap;
+}
+#baLabel1 {
+	border-style: none;
+}
+#baLabel2 {
+	border-style: none;
+}
+#rset {
+	z-index: 600;
+	position:absolute;
+	cursor:pointer;
+}
+.blackCover {
+	position:relative;
+	left:0px;
+	top:0px;
+	background: #000000;
+	z-index: 500;
+	width:5000px;
+	height:5000px;
+}
+
+*.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+/* Below are project-specific  */
+
+#badgeGroup {
+	position:relative;
+	padding-left:5px;
+	top:20px;
+	left:0px;
+	height: 65px;
+	background: #CCCCCC;
+}
+#tabGroup {
+	position:relative;
+	width: 959px;
+	top:0px;
+}
+#outputter{
+	position:relative;
+	left:0px;
+	top:200px;
+
+
+}
+#choiceButtons{
+	position:relative;
+	top:10px;
+	height:60px;
+	width:959px;
+}
+
+.choiceBut:hover {
+	color:#c74b15;	
+}
+
+.choiceSub{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:normal;
+
+}
+
+
+#creditNote{
+	position:relative;
+	right:0px;
+	top:5px;
+	margin-left: 8px;
+	font-size: 0.9em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-align:left;
+	line-height:120%;
+	color:#666;
+
+}
+.leaflet-control{
+	background: none;	
+}
+
+.leaflet-control-zoom{
+	padding:0px;
+	background: none;
+}
+.leaflet-control-zoom a{
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	
+}

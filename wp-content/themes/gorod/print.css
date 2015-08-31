@@ -1,0 +1,7 @@
+div, .print { display: none; }
+.wrapper, .main, .left, .single.single-news, .single > div, .single > div .gray-images, .single > div .wp-caption {
+    display: block;
+}
+.comments-ico { -webkit-print-color-adjust: exact; background: url(images/sprites.png) no-repeat 0 -8px !important;  }
+.views-ico { -webkit-print-color-adjust: exact; background: url(images/sprites.png) no-repeat 0 0 !important;  }
+.wrapper .main .left { width: auto; }

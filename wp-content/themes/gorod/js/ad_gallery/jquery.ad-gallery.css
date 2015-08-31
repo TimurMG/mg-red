@@ -1,0 +1,310 @@
+/**
+ * Copyright (c) 2012 Anders Ekdahl (http://coffeescripter.com/)
+ * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
+ * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
+ *
+ * Version: 1.2.7
+ *
+ * Demo and documentation: http://coffeescripter.com/code/ad-gallery/
+ */
+.am-gallery {
+    margin-bottom: 0px;
+	display:inline-block;
+}
+
+.am-gallery .am-image-wrapper {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 10px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.am-gallery .am-image-wrapper .am-loader {
+    position: absolute;
+    z-index: 10;
+    top: 48%;
+    left: 48%;
+    border: 1px solid #CCC;
+}
+
+.am-gallery .am-image-wrapper .am-next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+    z-index: 30;
+}
+
+.am-gallery .am-image-wrapper .am-prev {
+    position: absolute;
+    left: 124px;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+    z-index: 30;
+}
+
+.am-gallery .am-image-wrapper .am-prev, .am-gallery .am-image-wrapper .am-next {
+    /* Or else IE will hide it */
+    background: url(trans.gif);
+}
+
+.am-gallery .am-image-wrapper .am-prev .am-prev-image, .am-gallery .am-image-wrapper .am-next .am-next-image {
+    background: url(ad_prev.png);
+    width: 50px;
+    height: 50px;
+    display: none;
+    position: absolute;
+    top: 47%;
+    left: 5px;
+    z-index: 101;
+}
+
+.am-gallery .am-image-wrapper .am-next .am-next-image {
+    background: url(ad_next.png);
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    left: auto;
+}
+
+.am-gallery .am-image-wrapper .am-image {
+    position: absolute;
+    /*overflow: hidden;*/
+    top: 0;
+    left: 9px !important;
+    z-index: 9;
+}
+
+.am-gallery .am-image-wrapper .am-image a img {
+    border: 1px solid #EEE;
+	margin-left:114px;
+	height:326px !important;
+	width:445px;
+}
+
+.am-gallery .am-image-wrapper .am-image .am-image-description {
+    position: absolute;
+    bottom: 0px;
+    top:0;
+    left: 558px;
+    text-align: left;
+    width: 330px;
+    z-index: 300;
+    background: #EEE;
+    color: #000;
+    padding: 25px;
+}
+
+* html .am-gallery .am-image-wrapper .am-image .am-image-description {
+    background: none;
+}
+
+.am-gallery .am-image-wrapper .am-image .am-image-description .am-description-title {
+    display: block;
+    font-size: 21px;
+    color: #2c2c2c;
+    line-height: 23px;
+    font-weight: 700;
+    margin: 0 0px 30px 0;
+}
+
+.am-image-description a{ text-decoration:none;}
+
+.am-image-description a:hover .am-description-title{ color:#06C !important;}
+
+.am-gallery .am-image-wrapper .am-image .am-image-description .am-description-desc a {
+    font-size: 14px;
+    color: #3c3c3c;
+    line-height: 21px;
+    margin: 0 0 10px;
+	text-decoration:none;
+}
+.am-gallery .am-image-wrapper .am-image .am-image-description .am-description-desc a:hover { text-decoration: none; }
+
+.am-gallery .am-image-wrapper .am-image .am-image-description .am-description-comment {
+    color: #BEBEBE;
+    font-size: 12px;
+    position: absolute;
+    bottom: 12px;
+    left: 25px;
+}
+.am-gallery .am-image-wrapper .am-image .am-image-description .am-description-comment .comment-ico {
+    background: url(../../images/sprites.png) no-repeat -13px -8px; display: inline-block; zoom: 1; *display: inline;
+    height: 10px; width: 14px; margin: 0 10px 0 0; vertical-align: middle; *vertical-align: middle; opacity: 0.5;
+}
+.am-gallery .am-image-wrapper .am-image .am-image-description .am-description-comment .view-ico {
+    background: url(../../images/sprites.png) no-repeat 0 0px; display: inline-block; zoom: 1; *display: inline;
+    height: 8px; width: 14px; margin: 0 10px 0; vertical-align: baseline; *vertical-align: middle;
+}
+
+p.am-image-description {
+    margin-bottom: 0 !important;
+
+}
+
+p.am-image-description .am-description-title {
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+p.am-image-description span, p.am-image-description a {
+    color: #fff;
+}
+
+.am-gallery .am-image-wrapper .am-image .am-cat {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 300;
+    display: block !important;
+    color: #fff;
+    background: #E75105;
+    height: 25px;
+    font-size: 12px;
+    padding: 15px 0 0;
+    width: 100%;
+    overflow: hidden;
+}
+.am-gallery .am-image-wrapper .am-image .am-cat .cat { float: left; margin: 0 0 0 10px; }
+.am-gallery .am-image-wrapper .am-image .am-cat .date { float: right; margin: 0 10px 0 0; }
+
+.am-gallery .am-controls {
+    height: 20px;
+}
+
+.am-gallery .am-info {
+    float: left;
+}
+
+.am-gallery .am-slideshow-controls {
+    float: right;
+}
+
+.am-gallery .am-slideshow-controls .am-slideshow-start, .am-gallery .am-slideshow-controls .am-slideshow-stop {
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.am-gallery .am-slideshow-controls .am-slideshow-countdown {
+    padding-left: 5px;
+    font-size: 0.9em;
+}
+
+.am-gallery .am-slideshow-running .am-slideshow-start {
+    cursor: default;
+    font-style: italic;
+}
+
+.am-gallery .am-nav {
+    width: 100%;
+    position: relative;
+}
+
+.am-gallery .am-forward, .am-gallery .am-back {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 10;
+}
+
+/* IE 6 doesn't like height: 100% */
+* html .am-gallery .am-forward, .am-gallery .am-back {
+    height: 100px;
+}
+
+.am-gallery .am-back {
+    cursor: pointer;
+    left: 4px;
+    width: 4px;
+    display: none;
+    background: url(ad_scroll_back.png) 0px 42px no-repeat;
+}
+
+.am-gallery .am-forward {
+    cursor: pointer;
+    display: none;
+    right: 4px;
+    width: 4px;
+    background: url(ad_scroll_forward.png) 0px 42px no-repeat;
+}
+
+.am-gallery .am-nav .am-thumbs {
+    overflow: hidden;
+    padding: 0px 2px 0 0;
+    height: 325px;
+	position:absolute;
+	top:-338px;
+	z-index:10;
+	background-color:#FFF;
+}
+
+.am-gallery .am-thumbs .am-thumb-list {
+    float: left;
+    width: 122px !important;
+    list-style: none;
+	margin-left:0;
+	margin-bottom:0;
+}
+
+.am-gallery .am-thumbs li {
+    float: left;
+    padding-right: 0px;
+}
+
+.am-gallery .am-thumbs li:last-child {
+    padding-right: 0 !important;
+}
+
+.am-gallery .am-thumbs li a {
+    display: block;
+    position: relative;
+}
+.am-gallery .am-thumbs li a .hover { position: absolute; bottom: 0; left: 0; height: 24px; width:100%; display: none; }
+.am-gallery .am-thumbs li a.am-active .hover { display: block; background: transparent url(slider-current.png) no-repeat left bottom; }
+.am-gallery .am-thumbs li a:hover .hover { display: block; background: transparent url(slider-hover.png) repeat-x left bottom; }
+
+.am-gallery .am-thumbs li a img {
+    display: block;
+    height: 82px;
+	width:122px;
+	border-bottom:2px #FFF solid;
+   /* -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;*/ /* IE 6-9 */
+}
+
+.am-gallery .am-thumbs li a.am-active img {
+
+}
+
+/* Can't do display none, since Opera won't load the images then */
+.am-preloads {
+    position: absolute;
+    left: -9000px;
+    top: -9000px;
+}
+
+
+@media only screen and (max-width:1270px){
+
+    .am-gallery { margin-top: 150px; }
+    .am-gallery .am-image-wrapper .am-image .am-image-description { bottom: auto; left: 0; width: 518px; background: #F4D815 url(slider-desc-mini-bg.png) no-repeat right top;
+        padding: 15px 25px;
+        height: 120px;
+        overflow: hidden;
+        margin-top: -150px;
+    }
+    .am-gallery .am-image-wrapper .am-image .am-image-description .am-description-comment { display: none; }
+    .am-gallery .am-image-wrapper .am-image .am-image-description .am-description-title { margin: 0 15px 10px 0; }
+    .am-gallery .am-thumbs li { padding-right: 44px; }
+
+}

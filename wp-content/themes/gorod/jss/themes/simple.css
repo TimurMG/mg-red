@@ -1,0 +1,11 @@
+.box-modal {
+	position: relative;
+	width: 100%;
+	padding: 0px;
+	background: #fff;
+	color: #3c3c3c;
+	font: 14px/18px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+
+}
+.box-modal_close { position: fixed; cursor: pointer; }
+.box-modal_close:hover { color: #666; }
