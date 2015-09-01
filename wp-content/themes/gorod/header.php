@@ -92,7 +92,7 @@
                 <div style="display:inline-block; float:right; ">
                 <ul>
                 <li>
-                <a href="">
+                <a href="/wp-admin" target="_blank">
 Войти
 </a>
 </li>
